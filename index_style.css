@@ -19,7 +19,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 64px;
-  padding: 16px calc(50% - 600px) 126px calc(50% - 600px);
+  padding-top: 16px;
+  padding-bottom: 126px;
 }
 .header__nav_bar {
   height: 76px;
@@ -27,8 +28,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
 }
 .header__input {
   width: 288px;
@@ -114,8 +113,6 @@ body {
 }
 
 .for_box {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
   margin-bottom: 64px;
 }
 
@@ -174,8 +171,6 @@ body {
 }
 
 .section {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
   margin-bottom: 64px;
   margin-top: 40px;
   gap: 32px;
@@ -191,14 +186,10 @@ body {
   letter-spacing: 0;
   text-align: left;
   padding-bottom: 30px;
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
 }
 
 .offer {
   position: relative;
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
   display: flex;
   height: 400px;
   grid-column: span 4;
@@ -267,8 +258,6 @@ body {
   letter-spacing: 0%;
   text-align: left;
   text-decoration-line: underline;
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
 }
 
 .footer {
@@ -277,7 +266,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 32px calc(50% - 600px) 60px calc(50% - 600px);
+  padding-top: 32px;
+  padding-bottom: 60px;
   flex-wrap: wrap;
 }
 .footer__nav {
@@ -399,6 +389,11 @@ body {
 
 .footer__menu_link:hover {
   text-decoration: underline;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .header-cart {
@@ -976,4 +971,11 @@ label {
   text-decoration-line: underline;
   margin-left: calc(50% - 600px);
   margin-right: calc(50% - 600px);
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }/*# sourceMappingURL=index_style.css.map */

@@ -26,7 +26,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 64px;
-    padding: 16px calc(50% - 600px) 126px calc(50% - 600px);
+    padding-top: 16px;
+    padding-bottom: 126px;
 
     &__nav_bar{
         height: 76px;
@@ -34,8 +35,6 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-left: calc(50% - 600px);
-        padding-right: calc(50% - 600px);
     }
 
     &__input {
@@ -128,8 +127,6 @@ body {
 }
 
 .for_box {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
     margin-bottom: 64px;
 }
 
@@ -188,8 +185,6 @@ body {
 }
 
 .section {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
     margin-bottom: 64px;
     margin-top: 40px;
     gap: 32px;
@@ -205,16 +200,12 @@ body {
         letter-spacing: 0;
         text-align: left;
         padding-bottom: 30px;
-        padding-left: calc(50% - 600px);
-        padding-right: calc(50% - 600px);
     }
     
 }
 
 .offer {
     position: relative;
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
     display: flex;
     height: 400px;
     grid-column: span 4;
@@ -289,8 +280,6 @@ body {
     letter-spacing: 0%;
     text-align: left;
     text-decoration-line: underline;
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
 }
 
 .footer {
@@ -299,7 +288,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 32px calc(50% - 600px) 60px calc(50% - 600px);
+    padding-top: 32px;
+    padding-bottom: 60px;
     flex-wrap: wrap;
 
     &__nav{
@@ -436,5 +426,12 @@ body {
     text-decoration: underline;
 }
 
-@import '_shopping_cart';
-@import '_catalog_style';
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+@import 'shopping_cart';
+@import 'catalog_style';
+@import 'table';
+@import 'mobile';
