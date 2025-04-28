@@ -574,9 +574,8 @@ body {
   background: rgb(247, 246, 246);
   grid-column: span 4;
   padding-top: 42px;
-  padding-bottom: 150px;
   text-align: center;
-  height: 379px;
+  height: 556px;
 }
 .cart-offer-buy__title {
   color: rgb(0, 0, 0);
@@ -630,8 +629,6 @@ body {
   width: 290px;
   height: 41px;
   margin-top: 18px;
-  margin-right: 45px;
-  margin-left: 45px;
   color: rgb(0, 0, 0);
   font-family: Montserrat;
   font-size: 16px;
@@ -646,7 +643,7 @@ body {
   text-decoration-line: none;
   transition: transform 0.3s, background 0.3s;
 }
-.cart-offer-buy__bottom_btn:hover {
+.cart-offer-buy__btn_bottom:hover {
   background: black;
   color: white;
 }
@@ -783,13 +780,11 @@ label {
 .radio__input {
   display: none;
 }
-
 .radio__input + .radio__label {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
-
 .radio__input + .radio__label:before {
   content: "";
   width: 14px;
@@ -800,7 +795,6 @@ label {
   left: 0;
   background-color: #fff;
 }
-
 .radio__input:checked + .radio__label::before {
   content: "";
   width: 14px;
@@ -817,29 +811,24 @@ label {
 }
 
 .range {
+  background: none;
   position: relative;
 }
-
 .range__input {
   position: absolute;
   width: 190px;
   left: 0;
   top: calc(100% + 14px);
 }
-
-.range__input,
-.range__input::-webkit-slider-runnable-track,
-.range__input::-webkit-slider-thumb {
+.range__input, .range__input::-webkit-slider-runnable-track, .range__input::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: none;
 }
-
 .range__input::-webkit-slider-runnable-track {
   width: 200px;
   height: 1px;
   background: #000;
 }
-
 .range__input::-webkit-slider-thumb {
   position: relative;
   height: 8px;
@@ -851,7 +840,6 @@ label {
   cursor: pointer;
   z-index: 1;
 }
-
 .range__input::-webkit-slider-thumb:active {
   cursor: grabbing;
 }
@@ -881,6 +869,62 @@ label {
   cursor: pointer;
   position: relative;
 }
+.checkbox__label-white::before {
+  background-color: #fff;
+  border-color: #808080;
+}
+.checkbox__label-black::before {
+  background-color: #000;
+  border-color: #000;
+}
+.checkbox__label-gray::before {
+  background-color: #737373;
+  border-color: #737373;
+}
+.checkbox__label-red::before {
+  background-color: #f00;
+  border-color: #f00;
+}
+.checkbox__label-orange::before {
+  background-color: #ff4500;
+  border-color: #ff4500;
+}
+.checkbox__label-yellow::before {
+  background-color: #ff0;
+  border-color: #ff0;
+}
+.checkbox__label-green::before {
+  background-color: #008000;
+  border-color: #008000;
+}
+.checkbox__label-cyan::before {
+  background-color: #1CCC97;
+  border-color: #1CCC97;
+}
+.checkbox__label-light-blue::before {
+  background-color: #009fe3;
+  border-color: #009fe3;
+}
+.checkbox__label-blue::before {
+  background-color: #00f;
+  border-color: #00f;
+}
+.checkbox__label-purple::before {
+  background-color: #800080;
+  border-color: #800080;
+}
+.checkbox__label-violet::before {
+  background-color: #8a2be2;
+  border-color: #8a2be2;
+}
+.checkbox__label-lavender::before {
+  background-color: #d89aff;
+  border-color: #d89aff;
+}
+.checkbox__label-pink::before {
+  background-color: #ff1493;
+  border-color: #ff1493;
+}
 .checkbox__label::before {
   content: "";
   display: inline-block;
@@ -891,92 +935,18 @@ label {
   left: 0;
   background-color: #fff;
 }
-
-.checkbox-types {
-  width: 200px;
-}
-
 .checkbox__input:checked + .checkbox__label::before {
   background-image: url(img/check.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-color: #000;
 }
-
-.checkbox__label-white::before {
-  background-color: #fff;
-  border-color: #808080;
-}
-
-.checkbox__label-black::before {
-  background-color: #000;
-  border-color: #000;
-}
-
-.checkbox__label-gray::before {
-  background-color: #737373;
-  border-color: #737373;
-}
-
-.checkbox__label-red::before {
-  background-color: #f00;
-  border-color: #f00;
-}
-
-.checkbox__label-orange::before {
-  background-color: #ff4500;
-  border-color: #ff4500;
-}
-
-.checkbox__label-yellow::before {
-  background-color: #ff0;
-  border-color: #ff0;
-}
-
-.checkbox__label-green::before {
-  background-color: #008000;
-  border-color: #008000;
-}
-
-.checkbox__label-cyan::before {
-  background-color: #1CCC97;
-  border-color: #1CCC97;
-}
-
-.checkbox__label-light-blue::before {
-  background-color: #009fe3;
-  border-color: #009fe3;
-}
-
-.checkbox__label-blue::before {
-  background-color: #00f;
-  border-color: #00f;
-}
-
-.checkbox__label-purple::before {
-  background-color: #800080;
-  border-color: #800080;
-}
-
-.checkbox__label-violet::before {
-  background-color: #8a2be2;
-  border-color: #8a2be2;
-}
-
-.checkbox__label-lavender::before {
-  background-color: #d89aff;
-  border-color: #d89aff;
-}
-
-.checkbox__label-pink::before {
-  background-color: #ff1493;
-  border-color: #ff1493;
-}
-
-.checkbox__input:checked + .checkbox__label-black::before,
-.checkbox__input:checked + .checkbox__label-blue::before,
-.checkbox__input:checked + .checkbox__label-purple::before {
+.checkbox__input:checked + .checkbox__label-black::before, .checkbox__input:checked + .checkbox__label-blue::before, .checkbox__input:checked + .checkbox__label-purple::before {
   background-image: url(img/check_2.svg);
+}
+
+.checkbox-types {
+  width: 200px;
 }
 
 .offer-catalog {
