@@ -8,10 +8,9 @@ $price-text: rgb(5, 5, 5);
 }
 
 .catalog__top {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 36px;
 
     &_text {
         display: flex;
@@ -63,7 +62,7 @@ $price-text: rgb(5, 5, 5);
         justify-content: flex-start;
         align-items: flex-start;
         gap: 32px 65px;
-        padding: 40px 48px;
+        padding: 40px 48px 40px 48px;
         box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
         background: rgb(255, 255, 255);
         right: 0;
@@ -126,7 +125,7 @@ label{
     border-radius: 20px;
     font-family: $text-font;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: 0%;
     padding-left: 23px;
@@ -147,78 +146,79 @@ label{
     &__input{
         display: none;
     }
-}
 
-.radio__input + .radio__label {
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
-}
+    &__input + &__label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+    }
 
-.radio__input + .radio__label:before{
-    content: "";
-    width: 14px;
-    height: 14px;
-    border: 1px solid #888888;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    background-color: #fff;
-}
+    &__input + &__label:before{
+        content: "";
+        width: 14px;
+        height: 14px;
+        border: 1px solid #888888;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        background-color: #fff;
+    }
 
-.radio__input:checked + .radio__label::before{
-    content: "";
-    width: 14px;
-    height: 14px;
-    border: 1px solid #000000;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    background-color: #fff;
-    border-color: #000;
-    background-image: url(img/check.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    &__input:checked + &__label::before{
+        content: "";
+        width: 14px;
+        height: 14px;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        background-color: #fff;
+        border-color: #000;
+        background-image: url(img/check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 .range{
+    background: none;
     position: relative;
-}
 
-.range__input{
-    position: absolute;
-    width: 190px;
-    left: 0;
-    top: calc(100% + 14px);
-}
+    &__input{
+        position: absolute;
+        width: 190px;
+        left: 0;
+        top: calc(100% + 14px);
 
-.range__input,
-.range__input::-webkit-slider-runnable-track,
-.range__input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background: none;
-}
+        &,
+        &::-webkit-slider-runnable-track,
+        &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: none;
+        }
 
-.range__input::-webkit-slider-runnable-track {
-    width: 200px;
-    height: 1px;
-    background: #000;
-}
-  
-.range__input::-webkit-slider-thumb {
-    position: relative;
-    height: 8px;
-    width: 8px;
-    margin-top: -4px;
-    background: #000;
-    border: 1px solid #000;
-    border-radius: 25px;
-    cursor: pointer;
-    z-index: 1;
-}
-  
-.range__input::-webkit-slider-thumb:active {
-    cursor: grabbing;
+        &::-webkit-slider-runnable-track {
+            width: 200px;
+            height: 1px;
+            background: #000;
+        }
+
+        &::-webkit-slider-thumb {
+            position: relative;
+            height: 8px;
+            width: 8px;
+            margin-top: -4px;
+            background: #000;
+            border: 1px solid #000;
+            border-radius: 25px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        &::-webkit-slider-thumb:active {
+            cursor: grabbing;
+        }        
+    }
+    
 }
 
 .color-options{
@@ -246,6 +246,76 @@ label{
         font-size: 14px;
         cursor: pointer;
         position: relative;
+
+        &-white::before {
+            background-color: #fff;
+            border-color: #808080;
+        }
+        
+        &-black::before {
+        background-color: #000; 
+        border-color: #000;
+        }
+        
+        &-gray::before {
+        background-color: #737373;
+        border-color: #737373;
+        }
+        
+        &-red::before {
+        background-color: #f00;
+        border-color: #f00;
+        }
+        
+        &-orange::before {
+        background-color: #ff4500;
+        border-color: #ff4500;
+        }
+        
+        &-yellow::before {
+        background-color: #ff0; 
+        border-color: #ff0;
+        }
+        
+        &-green::before {
+        background-color: #008000;
+        border-color: #008000;
+        }
+        
+        &-cyan::before {
+        background-color: #1CCC97;
+        border-color: #1CCC97;
+        }
+        
+        &-light-blue::before {
+        background-color: #009fe3;
+        border-color: #009fe3;
+        }
+        
+        &-blue::before {
+        background-color: #00f;
+        border-color: #00f;
+        }
+        
+        &-purple::before {
+        background-color: #800080;
+        border-color: #800080;
+        }
+        
+        &-violet::before {
+        background-color: #8a2be2;
+        border-color: #8a2be2;
+        }
+        
+        &-lavender::before {
+        background-color: #d89aff;
+        border-color: #d89aff;
+        }
+        
+        &-pink::before {
+        background-color: #ff1493;
+        border-color: #ff1493;
+        }
       }
 
     &__label::before {
@@ -258,93 +328,25 @@ label{
         left: 0;
         background-color: #fff;
       }
+
+    &__input:checked + &__label::before {
+        background-image: url(img/check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-color: #000;
+    }
+
+    &__input:checked + &__label-black::before,
+    &__input:checked + &__label-blue::before,
+    &__input:checked + &__label-purple::before {
+    background-image: url(img/check_2.svg)
+    }
+
+    
 }
 
 .checkbox-types{
     width: 200px;
-}
-
-.checkbox__input:checked + .checkbox__label::before {
-    background-image: url(img/check.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    border-color: #000;
-}
-
-.checkbox__label-white::before {
-    background-color: #fff;
-    border-color: #808080;
-}
-
-.checkbox__label-black::before {
-background-color: #000; 
-border-color: #000;
-}
-
-.checkbox__label-gray::before {
-background-color: #737373;
-border-color: #737373;
-}
-
-.checkbox__label-red::before {
-background-color: #f00;
-border-color: #f00;
-}
-
-.checkbox__label-orange::before {
-background-color: #ff4500;
-border-color: #ff4500;
-}
-
-.checkbox__label-yellow::before {
-background-color: #ff0; 
-border-color: #ff0;
-}
-
-.checkbox__label-green::before {
-background-color: #008000;
-border-color: #008000;
-}
-
-.checkbox__label-cyan::before {
-background-color: #1CCC97;
-border-color: #1CCC97;
-}
-
-.checkbox__label-light-blue::before {
-background-color: #009fe3;
-border-color: #009fe3;
-}
-
-.checkbox__label-blue::before {
-background-color: #00f;
-border-color: #00f;
-}
-
-.checkbox__label-purple::before {
-background-color: #800080;
-border-color: #800080;
-}
-
-.checkbox__label-violet::before {
-background-color: #8a2be2;
-border-color: #8a2be2;
-}
-
-.checkbox__label-lavender::before {
-background-color: #d89aff;
-border-color: #d89aff;
-}
-
-.checkbox__label-pink::before {
-background-color: #ff1493;
-border-color: #ff1493;
-}
-
-.checkbox__input:checked + .checkbox__label-black::before,
-.checkbox__input:checked + .checkbox__label-blue::before,
-.checkbox__input:checked + .checkbox__label-purple::before {
-background-image: url(img/check_2.svg)
 }
 
 .offer-catalog{
@@ -360,6 +362,4 @@ background-image: url(img/check_2.svg)
     letter-spacing: 0%;
     text-align: left;
     text-decoration-line: underline;
-    margin-left: calc(50% - 600px);
-    margin-right: calc(50% - 600px);
 }

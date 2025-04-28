@@ -29,6 +29,10 @@ body {
     padding-top: 16px;
     padding-bottom: 126px;
 
+    &__nav_mobile {
+        display: none;
+    }
+
     &__nav_bar{
         height: 76px;
         display: flex;
@@ -98,7 +102,6 @@ body {
         line-height: 70px;
         letter-spacing: 0%;
         text-align: left;
-        width: 792px;
         }
 
     &__desc {
@@ -186,8 +189,7 @@ body {
 
 .section {
     margin-bottom: 64px;
-    margin-top: 40px;
-    gap: 32px;
+    gap: 38px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
@@ -199,7 +201,7 @@ body {
         line-height: 59px;
         letter-spacing: 0;
         text-align: left;
-        padding-bottom: 30px;
+        padding-bottom: 32px;
     }
     
 }
@@ -207,7 +209,6 @@ body {
 .offer {
     position: relative;
     display: flex;
-    height: 400px;
     grid-column: span 4;
     flex-direction: column;
 
@@ -291,6 +292,12 @@ body {
     padding-top: 32px;
     padding-bottom: 60px;
     flex-wrap: wrap;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        gap: 130px;
+    }
 
     &__nav{
         text-align: left;
