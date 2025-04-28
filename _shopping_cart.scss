@@ -7,13 +7,10 @@ $price-text: rgb(5, 5, 5);
 }
 
 .cart{
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
     margin-bottom: 64px;
     gap: 32px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    height: 580px;
 
     &__items {
         display: flex;
@@ -34,14 +31,14 @@ $price-text: rgb(5, 5, 5);
                 gap: 32px;
             }
 
-            &_text{
+            &__text{
                 display: flex;
                 width: 276px;
                 flex-direction: column;
                 justify-content: space-around;
             }
 
-            &_title{
+            &__title{
                 color: $color-text;
                 font-family: $text-font;
                 font-size: 24px;
@@ -51,7 +48,7 @@ $price-text: rgb(5, 5, 5);
                 text-align: left;
             }
 
-            &_desc{
+            &__desc{
                 color: rgb(136, 136, 136);
                 font-family: $text-font;
                 font-size: 14px;
@@ -61,7 +58,7 @@ $price-text: rgb(5, 5, 5);
                 text-align: left;
             }
 
-            &_price{
+            &__price{
                 color: $price-text;
                 font-family: $text-font;
                 font-size: 16px;
@@ -70,12 +67,12 @@ $price-text: rgb(5, 5, 5);
                 letter-spacing: 0%;
             }
 
-            &_choose{
+            &__choose{
                 display: flex;
                 flex-direction: row;
                 gap: 30px;
 
-                &_1{
+                &__link-1{
                     color: $color-text;
                     font-family: $text-font;
                     font-size: 14px;
@@ -85,7 +82,7 @@ $price-text: rgb(5, 5, 5);
                     text-decoration-line: underline;
                 }
 
-                &_2{
+                &__link-2{
                     color: $color-text;
                     font-family: $text-font;
                     font-size: 14px;
@@ -96,15 +93,16 @@ $price-text: rgb(5, 5, 5);
                 }
             }
             
-            &_count{
+            &__count{
                 color: $color-text;
                 font-family: $text-font;
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 210%;
                 letter-spacing: 0px;
-                text-align: center;
-                width: 71px;
+                text-align: left;
+                width: 49px;
+                padding-left: 22px;
                 height: 51px;
                 border-radius: 6px;
                 border: none;
@@ -124,6 +122,7 @@ $price-text: rgb(5, 5, 5);
         line-height: 20px;
         letter-spacing: 0px;
         padding-bottom: 14px;
+        padding-right: 27px;
     }
 
     &__buttons{
@@ -132,7 +131,7 @@ $price-text: rgb(5, 5, 5);
         flex-direction: row;
         gap: 7px;
 
-        &_clear{
+        &__btn-clear{
             display: flex;
             justify-content: center;
             width: 200px;
@@ -140,7 +139,7 @@ $price-text: rgb(5, 5, 5);
             margin-top: 18px;
             color: $color-text;
             font-family: $text-font;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 20px;
             letter-spacing: 0px;
@@ -149,10 +148,16 @@ $price-text: rgb(5, 5, 5);
             border: 1px solid rgb(4, 4, 4);
             border-radius: 20px;
             align-items: center;
-            text-decoration-line: none 
+            text-decoration-line: none;
+            transition: transform 0.3s, background 0.3s;
         }
 
-        &_contin{
+        &__btn-clear:hover {
+            background: black;
+            color: white;
+        }
+
+        &__btn-contin{
             display: flex;
             justify-content: center;
             width: 200px;
@@ -160,7 +165,7 @@ $price-text: rgb(5, 5, 5);
             margin-top: 18px;
             color: $color-text;
             font-family: $text-font;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 20px;
             letter-spacing: 0px;
@@ -169,18 +174,27 @@ $price-text: rgb(5, 5, 5);
             border: 1px solid rgb(4, 4, 4);
             border-radius: 20px;
             align-items: center;
-            text-decoration-line: none
+            text-decoration-line: none;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        &__btn-contin:hover {
+            background: black;
+            color: white;
         }
     }
 }
 
 .cart-offer-buy{
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
     background: rgb(247, 246, 246);
     grid-column: span 4;
     padding-top: 42px;
     padding-bottom: 150px;
     text-align: center;
+    height: 379px;
 
     &__title{
         color: $color-text;
@@ -219,7 +233,8 @@ $price-text: rgb(5, 5, 5);
         color: $color-text;
     }
 
-    &__bottom_price{
+    &__price_bottom{
+        margin-top: 64px;
         margin-bottom: 18px;
         color: $color-text;
         font-family: $text-font;
@@ -229,7 +244,8 @@ $price-text: rgb(5, 5, 5);
         letter-spacing: 0px;
     }
 
-    &__bottom_btn{
+    &__btn_bottom{
+        align-self: center;
         display: flex;
         justify-content: center;
         width: 290px;
@@ -248,6 +264,12 @@ $price-text: rgb(5, 5, 5);
         border: 1px solid rgb(4, 4, 4);
         border-radius: 20px;
         align-items: center;
-        text-decoration-line: none
+        text-decoration-line: none;
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    &__bottom_btn:hover {
+        background: black;
+        color: white;
     }
 }
