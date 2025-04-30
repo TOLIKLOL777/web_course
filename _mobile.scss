@@ -55,17 +55,18 @@
     .catalog__top {
         flex-direction: column;
         gap: 14px;
+        margin-bottom: 32px;
     }
 
     .catalog__top_filters {
-        flex-direction: column;
-        padding-bottom: 32px;
+        flex-direction: column-reverse;
     }
 
     .filter-1__form {
         flex-wrap: nowrap;
         height: 910px;
-        width: 286px;
+        width: auto;
+        right: 0;
         left: 0;
     }
 
