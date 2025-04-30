@@ -28,6 +28,7 @@
         }
 
         &__title {
+            width: 100%;
             font-size: 48px;
             line-height: 59px;
             text-align: center;
@@ -150,12 +151,12 @@
     }
 
     .section {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
-
         &__title {
             font-size: 24px;
             line-height: 29px;
+        }
+        &__items{
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 

@@ -239,6 +239,17 @@ label{
         display: none;
     }
 
+    &__label::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #888888;
+        position: absolute;
+        left: 0;
+        background-color: #fff;
+      }
+
     &__label {
         display: flex;
         padding-left: 30px;
@@ -318,17 +329,6 @@ label{
         }
       }
 
-    &__label::before {
-        content: "";
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        border: 1px solid #888888;
-        position: absolute;
-        left: 0;
-        background-color: #fff;
-      }
-
     &__input:checked + &__label::before {
         background-image: url(img/check.svg);
         background-repeat: no-repeat;
@@ -339,7 +339,7 @@ label{
     &__input:checked + &__label-black::before,
     &__input:checked + &__label-blue::before,
     &__input:checked + &__label-purple::before {
-    background-image: url(img/check_2.svg)
+    background-image: url(img/check_2.svg);
     }
 
     

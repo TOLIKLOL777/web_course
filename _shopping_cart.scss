@@ -217,6 +217,7 @@ $price-text: rgb(5, 5, 5);
     }
 
     &__input{
+        width: 100%;
         color: $color-text;
         font-family: $text-font;
         font-size: 14px;
